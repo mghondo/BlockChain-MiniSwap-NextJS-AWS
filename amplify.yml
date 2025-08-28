@@ -1,0 +1,35 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd frontend
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: frontend/.next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - frontend/node_modules/**/*
+    appRoot: miniswap
+    envName: AMPLIFY_MONOREPO_APP_ROOT
+    
+backend:
+  phases:
+    preBuild:
+      commands:
+        - cd contracts
+        - npm ci
+    build:
+      commands:
+        - npm run compile
+        - npm run deploy:testnet
+  artifacts:
+    files:
+      - contracts/deployments/**/*
+      - contracts/artifacts/**/*

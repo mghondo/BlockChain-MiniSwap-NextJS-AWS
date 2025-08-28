@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # Hardhat Node for local blockchain
+  hardhat:
+    build:
+      context: ../contracts
+      dockerfile: ../docker/Dockerfile.hardhat
+    ports:
+      - "8545:8545"
+    volumes:
+      - ../contracts:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    networks:
+      - miniswap-network
+    command: npm run node
+
+  # Next.js Frontend
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../docker/Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../frontend:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_CHAIN_ID=31337
+      - NEXT_PUBLIC_RPC_URL=http://hardhat:8545
+      - NEXT_PUBLIC_DYNAMODB_ENDPOINT=http://dynamodb:8000
+    depends_on:
+      - hardhat
+      - dynamodb
+    networks:
+      - miniswap-network
+    command: npm run dev
+
+  # DynamoDB Local
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/dynamodb:/data
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /data
+    networks:
+      - miniswap-network
+
+  # DynamoDB Admin UI (Optional)
+  dynamodb-admin:
+    image: aaronshaf/dynamodb-admin:latest
+    ports:
+      - "8001:8001"
+    environment:
+      - DYNAMO_ENDPOINT=http://dynamodb:8000
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=local
+      - AWS_SECRET_ACCESS_KEY=local
+    depends_on:
+      - dynamodb
+    networks:
+      - miniswap-network
+
+networks:
+  miniswap-network:
+    driver: bridge
+
+volumes:
+  hardhat_node_modules:
+  frontend_node_modules:
+  dynamodb_data:

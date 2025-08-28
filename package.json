@@ -1,0 +1,44 @@
+{
+  "name": "miniswap-monorepo",
+  "version": "1.0.0",
+  "description": "MiniSwap - A Uniswap V2 Clone for Portfolio Demonstration",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:contracts\" \"npm run dev:frontend\"",
+    "dev:contracts": "cd contracts && npm run node",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:contracts && npm run build:frontend",
+    "build:contracts": "cd contracts && npm run compile",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npm run test:contracts",
+    "test:contracts": "cd contracts && npm test",
+    "deploy:local": "cd contracts && npm run deploy:local",
+    "docker:up": "docker-compose -f docker/docker-compose.yml up",
+    "docker:down": "docker-compose -f docker/docker-compose.yml down",
+    "docker:build": "docker-compose -f docker/docker-compose.yml build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/miniswap"
+  },
+  "keywords": [
+    "defi",
+    "uniswap",
+    "amm",
+    "ethereum",
+    "blockchain"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "dotenv": "^17.2.1"
+  }
+}
