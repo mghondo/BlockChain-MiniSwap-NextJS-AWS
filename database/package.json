@@ -1,0 +1,12 @@
+{
+  "name": "miniswap-database",
+  "version": "1.0.0",
+  "description": "Database migration utilities for MiniSwap",
+  "scripts": {
+    "migrate": "node migrate.js migrate",
+    "test": "node migrate.js test"
+  },
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+}
