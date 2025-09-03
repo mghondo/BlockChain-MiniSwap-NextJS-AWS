@@ -1,0 +1,21 @@
+{
+  "version": "48.0.0",
+  "files": {
+    "956f1c63dd4f7db1e752451e3d37effe75081919083e801009f2c774149b9fb4": {
+      "displayName": "MiniSwapDatabaseStack Template",
+      "source": {
+        "path": "MiniSwapDatabaseStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "720759362243-us-east-1-47dd3c04": {
+          "bucketName": "cdk-hnb659fds-assets-720759362243-us-east-1",
+          "objectKey": "956f1c63dd4f7db1e752451e3d37effe75081919083e801009f2c774149b9fb4.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::720759362243:role/cdk-hnb659fds-file-publishing-role-720759362243-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
