@@ -1,7 +1,7 @@
 {
  "Description": "MiniSwap Database Infrastructure - VPC + RDS PostgreSQL",
  "Resources": {
-  "MiniSwapVPCw79gky789456FA": {
+  "MiniSwapVPCfy6eecE531E0AB": {
    "Type": "AWS::EC2::VPC",
    "Properties": {
     "CidrBlock": "10.0.0.0/16",
@@ -11,15 +11,15 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "miniswap-vpc-w79gky"
+      "Value": "miniswap-vpc-fy6eec"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/Resource"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/Resource"
    }
   },
-  "MiniSwapVPCw79gkyprivatesubnetSubnet1Subnet3825B795": {
+  "MiniSwapVPCfy6eecprivatesubnetSubnet1Subnet84803CFC": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
     "AvailabilityZone": "us-east-1a",
@@ -36,64 +36,64 @@
      },
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet1"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1"
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet1/Subnet"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1/Subnet"
    }
   },
-  "MiniSwapVPCw79gkyprivatesubnetSubnet1RouteTableCEBC30EB": {
+  "MiniSwapVPCfy6eecprivatesubnetSubnet1RouteTable92E87F0A": {
    "Type": "AWS::EC2::RouteTable",
    "Properties": {
     "Tags": [
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet1"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1"
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet1/RouteTable"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1/RouteTable"
    }
   },
-  "MiniSwapVPCw79gkyprivatesubnetSubnet1RouteTableAssociation7013EE1E": {
+  "MiniSwapVPCfy6eecprivatesubnetSubnet1RouteTableAssociationBCAEA0CB": {
    "Type": "AWS::EC2::SubnetRouteTableAssociation",
    "Properties": {
     "RouteTableId": {
-     "Ref": "MiniSwapVPCw79gkyprivatesubnetSubnet1RouteTableCEBC30EB"
+     "Ref": "MiniSwapVPCfy6eecprivatesubnetSubnet1RouteTable92E87F0A"
     },
     "SubnetId": {
-     "Ref": "MiniSwapVPCw79gkyprivatesubnetSubnet1Subnet3825B795"
+     "Ref": "MiniSwapVPCfy6eecprivatesubnetSubnet1Subnet84803CFC"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet1/RouteTableAssociation"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1/RouteTableAssociation"
    }
   },
-  "MiniSwapVPCw79gkyprivatesubnetSubnet1DefaultRoute19A11FEC": {
+  "MiniSwapVPCfy6eecprivatesubnetSubnet1DefaultRoute07904007": {
    "Type": "AWS::EC2::Route",
    "Properties": {
     "DestinationCidrBlock": "0.0.0.0/0",
     "NatGatewayId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet1NATGateway4711A4B8"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet1NATGateway7F060DA5"
     },
     "RouteTableId": {
-     "Ref": "MiniSwapVPCw79gkyprivatesubnetSubnet1RouteTableCEBC30EB"
+     "Ref": "MiniSwapVPCfy6eecprivatesubnetSubnet1RouteTable92E87F0A"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet1/DefaultRoute"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1/DefaultRoute"
    }
   },
-  "MiniSwapVPCw79gkyprivatesubnetSubnet2Subnet841600D1": {
+  "MiniSwapVPCfy6eecprivatesubnetSubnet2Subnet0C586E8D": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
     "AvailabilityZone": "us-east-1b",
@@ -110,64 +110,64 @@
      },
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet2"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2"
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet2/Subnet"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2/Subnet"
    }
   },
-  "MiniSwapVPCw79gkyprivatesubnetSubnet2RouteTableD41C04FC": {
+  "MiniSwapVPCfy6eecprivatesubnetSubnet2RouteTable08C335B6": {
    "Type": "AWS::EC2::RouteTable",
    "Properties": {
     "Tags": [
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet2"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2"
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet2/RouteTable"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2/RouteTable"
    }
   },
-  "MiniSwapVPCw79gkyprivatesubnetSubnet2RouteTableAssociationD0C1ED98": {
+  "MiniSwapVPCfy6eecprivatesubnetSubnet2RouteTableAssociationB243F87C": {
    "Type": "AWS::EC2::SubnetRouteTableAssociation",
    "Properties": {
     "RouteTableId": {
-     "Ref": "MiniSwapVPCw79gkyprivatesubnetSubnet2RouteTableD41C04FC"
+     "Ref": "MiniSwapVPCfy6eecprivatesubnetSubnet2RouteTable08C335B6"
     },
     "SubnetId": {
-     "Ref": "MiniSwapVPCw79gkyprivatesubnetSubnet2Subnet841600D1"
+     "Ref": "MiniSwapVPCfy6eecprivatesubnetSubnet2Subnet0C586E8D"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet2/RouteTableAssociation"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2/RouteTableAssociation"
    }
   },
-  "MiniSwapVPCw79gkyprivatesubnetSubnet2DefaultRoute8978C2CC": {
+  "MiniSwapVPCfy6eecprivatesubnetSubnet2DefaultRoute0EFB70A8": {
    "Type": "AWS::EC2::Route",
    "Properties": {
     "DestinationCidrBlock": "0.0.0.0/0",
     "NatGatewayId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet1NATGateway4711A4B8"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet1NATGateway7F060DA5"
     },
     "RouteTableId": {
-     "Ref": "MiniSwapVPCw79gkyprivatesubnetSubnet2RouteTableD41C04FC"
+     "Ref": "MiniSwapVPCfy6eecprivatesubnetSubnet2RouteTable08C335B6"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/private-subnetSubnet2/DefaultRoute"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2/DefaultRoute"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet1SubnetF19FFB2D": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet1SubnetA82DE362": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
     "AvailabilityZone": "us-east-1a",
@@ -184,109 +184,109 @@
      },
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1"
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1/Subnet"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/Subnet"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet1RouteTableBAC2B831": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet1RouteTableEA7DAF78": {
    "Type": "AWS::EC2::RouteTable",
    "Properties": {
     "Tags": [
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1"
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1/RouteTable"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/RouteTable"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet1RouteTableAssociationFBCB2D0C": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet1RouteTableAssociation6E5DC8BB": {
    "Type": "AWS::EC2::SubnetRouteTableAssociation",
    "Properties": {
     "RouteTableId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet1RouteTableBAC2B831"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet1RouteTableEA7DAF78"
     },
     "SubnetId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet1SubnetF19FFB2D"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet1SubnetA82DE362"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1/RouteTableAssociation"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/RouteTableAssociation"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet1DefaultRoute07EC0F70": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet1DefaultRoute27CF0DE7": {
    "Type": "AWS::EC2::Route",
    "Properties": {
     "DestinationCidrBlock": "0.0.0.0/0",
     "GatewayId": {
-     "Ref": "MiniSwapVPCw79gkyIGW49756394"
+     "Ref": "MiniSwapVPCfy6eecIGWCAE9E531"
     },
     "RouteTableId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet1RouteTableBAC2B831"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet1RouteTableEA7DAF78"
     }
    },
    "DependsOn": [
-    "MiniSwapVPCw79gkyVPCGW3BCFC2D5"
+    "MiniSwapVPCfy6eecVPCGW14045340"
    ],
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1/DefaultRoute"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/DefaultRoute"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet1EIP32484F56": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet1EIPD6801E53": {
    "Type": "AWS::EC2::EIP",
    "Properties": {
     "Domain": "vpc",
     "Tags": [
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1/EIP"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/EIP"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet1NATGateway4711A4B8": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet1NATGateway7F060DA5": {
    "Type": "AWS::EC2::NatGateway",
    "Properties": {
     "AllocationId": {
      "Fn::GetAtt": [
-      "MiniSwapVPCw79gkypublicsubnetSubnet1EIP32484F56",
+      "MiniSwapVPCfy6eecpublicsubnetSubnet1EIPD6801E53",
       "AllocationId"
      ]
     },
     "SubnetId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet1SubnetF19FFB2D"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet1SubnetA82DE362"
     },
     "Tags": [
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1"
      }
     ]
    },
    "DependsOn": [
-    "MiniSwapVPCw79gkypublicsubnetSubnet1DefaultRoute07EC0F70",
-    "MiniSwapVPCw79gkypublicsubnetSubnet1RouteTableAssociationFBCB2D0C"
+    "MiniSwapVPCfy6eecpublicsubnetSubnet1DefaultRoute27CF0DE7",
+    "MiniSwapVPCfy6eecpublicsubnetSubnet1RouteTableAssociation6E5DC8BB"
    ],
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet1/NATGateway"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/NATGateway"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet2SubnetD5851045": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet2Subnet7EB97FE3": {
    "Type": "AWS::EC2::Subnet",
    "Properties": {
     "AvailabilityZone": "us-east-1b",
@@ -303,99 +303,99 @@
      },
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet2"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2"
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet2/Subnet"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2/Subnet"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet2RouteTableE8A67953": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet2RouteTable0DCA8C50": {
    "Type": "AWS::EC2::RouteTable",
    "Properties": {
     "Tags": [
      {
       "Key": "Name",
-      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet2"
+      "Value": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2"
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet2/RouteTable"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2/RouteTable"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet2RouteTableAssociation20426FC0": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet2RouteTableAssociationCD6F15DE": {
    "Type": "AWS::EC2::SubnetRouteTableAssociation",
    "Properties": {
     "RouteTableId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet2RouteTableE8A67953"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet2RouteTable0DCA8C50"
     },
     "SubnetId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet2SubnetD5851045"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet2Subnet7EB97FE3"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet2/RouteTableAssociation"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2/RouteTableAssociation"
    }
   },
-  "MiniSwapVPCw79gkypublicsubnetSubnet2DefaultRouteA5D8855D": {
+  "MiniSwapVPCfy6eecpublicsubnetSubnet2DefaultRoute83EC37DE": {
    "Type": "AWS::EC2::Route",
    "Properties": {
     "DestinationCidrBlock": "0.0.0.0/0",
     "GatewayId": {
-     "Ref": "MiniSwapVPCw79gkyIGW49756394"
+     "Ref": "MiniSwapVPCfy6eecIGWCAE9E531"
     },
     "RouteTableId": {
-     "Ref": "MiniSwapVPCw79gkypublicsubnetSubnet2RouteTableE8A67953"
+     "Ref": "MiniSwapVPCfy6eecpublicsubnetSubnet2RouteTable0DCA8C50"
     }
    },
    "DependsOn": [
-    "MiniSwapVPCw79gkyVPCGW3BCFC2D5"
+    "MiniSwapVPCfy6eecVPCGW14045340"
    ],
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/public-subnetSubnet2/DefaultRoute"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2/DefaultRoute"
    }
   },
-  "MiniSwapVPCw79gkyIGW49756394": {
+  "MiniSwapVPCfy6eecIGWCAE9E531": {
    "Type": "AWS::EC2::InternetGateway",
    "Properties": {
     "Tags": [
      {
       "Key": "Name",
-      "Value": "miniswap-vpc-w79gky"
+      "Value": "miniswap-vpc-fy6eec"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/IGW"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/IGW"
    }
   },
-  "MiniSwapVPCw79gkyVPCGW3BCFC2D5": {
+  "MiniSwapVPCfy6eecVPCGW14045340": {
    "Type": "AWS::EC2::VPCGatewayAttachment",
    "Properties": {
     "InternetGatewayId": {
-     "Ref": "MiniSwapVPCw79gkyIGW49756394"
+     "Ref": "MiniSwapVPCfy6eecIGWCAE9E531"
     },
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-w79gky/VPCGW"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/VPCGW"
    }
   },
-  "MiniSwapDBSecurityGroupw79gky824564F2": {
+  "MiniSwapDBSecurityGroupfy6eec7BBDD779": {
    "Type": "AWS::EC2::SecurityGroup",
    "Properties": {
     "GroupDescription": "Security group for MiniSwap PostgreSQL database",
-    "GroupName": "miniswap-db-sg-w79gky",
+    "GroupName": "miniswap-db-sg-fy6eec",
     "SecurityGroupEgress": [
      {
       "CidrIp": "255.255.255.255/32",
@@ -406,14 +406,14 @@
      }
     ],
     "VpcId": {
-     "Ref": "MiniSwapVPCw79gky789456FA"
+     "Ref": "MiniSwapVPCfy6eecE531E0AB"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDBSecurityGroup-w79gky/Resource"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDBSecurityGroup-fy6eec/Resource"
    }
   },
-  "MiniSwapDBSecretw79gky1B40ADBC": {
+  "MiniSwapDBSecretfy6eec213F7CE3": {
    "Type": "AWS::SecretsManager::Secret",
    "Properties": {
     "Description": "MiniSwap PostgreSQL credentials",
@@ -423,60 +423,60 @@
      "PasswordLength": 16,
      "SecretStringTemplate": "{\"username\":\"miniswap_admin\"}"
     },
-    "Name": "swapapp-secrets-w79gky"
+    "Name": "swapapp-secrets-fy6eec"
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDBSecret-w79gky/Resource"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDBSecret-fy6eec/Resource"
    }
   },
-  "MiniSwapDBSecretw79gkyAttachment9C16037C": {
+  "MiniSwapDBSecretfy6eecAttachmentCFC3105B": {
    "Type": "AWS::SecretsManager::SecretTargetAttachment",
    "Properties": {
     "SecretId": {
-     "Ref": "MiniSwapDBSecretw79gky1B40ADBC"
+     "Ref": "MiniSwapDBSecretfy6eec213F7CE3"
     },
     "TargetId": {
-     "Ref": "MiniSwapDBw79gky16BDA697"
+     "Ref": "MiniSwapDBfy6eec2849F4E9"
     },
     "TargetType": "AWS::RDS::DBInstance"
    },
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDBSecret-w79gky/Attachment/Resource"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDBSecret-fy6eec/Attachment/Resource"
    }
   },
-  "MiniSwapDBSubnetGroupw79gky": {
+  "MiniSwapDBSubnetGroupfy6eec": {
    "Type": "AWS::RDS::DBSubnetGroup",
    "Properties": {
     "DBSubnetGroupDescription": "Subnet group for MiniSwap database",
-    "DBSubnetGroupName": "miniswap-db-subnet-group-w79gky",
+    "DBSubnetGroupName": "miniswap-db-subnet-group-fy6eec",
     "SubnetIds": [
      {
-      "Ref": "MiniSwapVPCw79gkyprivatesubnetSubnet1Subnet3825B795"
+      "Ref": "MiniSwapVPCfy6eecprivatesubnetSubnet1Subnet84803CFC"
      },
      {
-      "Ref": "MiniSwapVPCw79gkyprivatesubnetSubnet2Subnet841600D1"
+      "Ref": "MiniSwapVPCfy6eecprivatesubnetSubnet2Subnet0C586E8D"
      }
     ]
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDBSubnetGroup-w79gky/Default"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDBSubnetGroup-fy6eec/Default"
    }
   },
-  "MiniSwapDBw79gky16BDA697": {
+  "MiniSwapDBfy6eec2849F4E9": {
    "Type": "AWS::RDS::DBInstance",
    "Properties": {
     "AllocatedStorage": "20",
     "BackupRetentionPeriod": 7,
     "CopyTagsToSnapshot": true,
     "DBInstanceClass": "db.t3.micro",
-    "DBInstanceIdentifier": "miniswap-db-w79gky",
+    "DBInstanceIdentifier": "miniswap-db-fy6eec",
     "DBName": "miniswap",
     "DBSubnetGroupName": {
-     "Ref": "MiniSwapDBSubnetGroupw79gky"
+     "Ref": "MiniSwapDBSubnetGroupfy6eec"
     },
     "DeletionProtection": false,
     "EnablePerformanceInsights": false,
@@ -488,7 +488,7 @@
       [
        "{{resolve:secretsmanager:",
        {
-        "Ref": "MiniSwapDBSecretw79gky1B40ADBC"
+        "Ref": "MiniSwapDBSecretfy6eec213F7CE3"
        },
        ":SecretString:password::}}"
       ]
@@ -500,7 +500,7 @@
       [
        "{{resolve:secretsmanager:",
        {
-        "Ref": "MiniSwapDBSecretw79gky1B40ADBC"
+        "Ref": "MiniSwapDBSecretfy6eec213F7CE3"
        },
        ":SecretString:username::}}"
       ]
@@ -513,7 +513,7 @@
     "VPCSecurityGroups": [
      {
       "Fn::GetAtt": [
-       "MiniSwapDBSecurityGroupw79gky824564F2",
+       "MiniSwapDBSecurityGroupfy6eec7BBDD779",
        "GroupId"
       ]
      }
@@ -522,13 +522,28 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDB-w79gky/Resource"
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapDB-fy6eec/Resource"
+   }
+  },
+  "MiniSwapECSClusterfy6eec74533B07": {
+   "Type": "AWS::ECS::Cluster",
+   "Properties": {
+    "ClusterName": "miniswap-cluster-fy6eec",
+    "ClusterSettings": [
+     {
+      "Name": "containerInsights",
+      "Value": "disabled"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "MiniSwapDatabaseStack/MiniSwapECSCluster-fy6eec/Resource"
    }
   },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/12OQW+CQBCFf4v3ZavEi0eLjeFSCRiuzbBM7Srskp1ZiSH89waxQHp6733zMjOhDDdbuV5BS4Eqb0GlC9llDOomoKWvDlUou7xRIvo2eRKJxOk7MGa+MMgDnF1qPeMZigpnPrM9kVUaWFszlUXii0qrecVHnAzyCXwExhYeQ4oNozO4RHkSvdKeGdRPjYZFhso7zY+js755vrAEvSBUDplqMHBBJ7vsmV/FwY1yBndBXuydCv8nvXAlyW58f7p6eF+CAzAUQBgbYjAKx8Zf6nuRIlnvxsHJc+O5F8aWKK/0dg/XcrOT29WVtA6cN6xrlOmov+nhWja6AQAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/12OwW6DMBBEvyV34yYolx5TUkVcWgQR12ox29QJGORdB0XI/14RKKCeZubteL2hDHd7ud1AR4Eqb0GlC9lnDOomoKOvHlUo+7xVIvo2eRKJxOo7MGauMMgDXFzaOMYzFBUufGEHokZpYN2YuSwSV1RaLSve42SQD+ATMHbwGFJsGK3BNcqTaEoHZlA/NRoWGSpnNT9OtnHt84Q18IJQWWSqwcAFreyzZ56KgxvlDPaCvNo7F/5PvLAlyX48f/71+LYGR2AogDA2xGAUjo2/5AUqkn1UOWK0w2yy3osUqXF2fPHpuHXshWlKlFd6uYdbuXuV+82VtA6sM6xrlOmovx5hIbvTAQAA"
    },
    "Metadata": {
     "aws:cdk:path": "MiniSwapDatabaseStack/CDKMetadata/Default"
@@ -536,39 +551,48 @@
   }
  },
  "Outputs": {
-  "VpcIdw79gky": {
+  "VpcIdfy6eec": {
    "Description": "VPC ID for MiniSwap",
    "Value": {
-    "Ref": "MiniSwapVPCw79gky789456FA"
+    "Ref": "MiniSwapVPCfy6eecE531E0AB"
    },
    "Export": {
-    "Name": "MiniSwap-VPC-w79gky"
+    "Name": "MiniSwap-VPC-fy6eec"
    }
   },
-  "DatabaseEndpointw79gky": {
+  "DatabaseEndpointfy6eec": {
    "Description": "RDS Database Endpoint",
    "Value": {
     "Fn::GetAtt": [
-     "MiniSwapDBw79gky16BDA697",
+     "MiniSwapDBfy6eec2849F4E9",
      "Endpoint.Address"
     ]
    },
    "Export": {
-    "Name": "MiniSwap-DB-Endpoint-w79gky"
+    "Name": "MiniSwap-DB-Endpoint-fy6eec"
    }
   },
-  "DatabaseSecretArnw79gky": {
+  "DatabaseSecretArnfy6eec": {
    "Description": "Database Secret ARN",
    "Value": {
-    "Ref": "MiniSwapDBSecretw79gky1B40ADBC"
+    "Ref": "MiniSwapDBSecretfy6eec213F7CE3"
    },
    "Export": {
-    "Name": "MiniSwap-DB-Secret-w79gky"
+    "Name": "MiniSwap-DB-Secret-fy6eec"
+   }
+  },
+  "ECSClusterNamefy6eec": {
+   "Description": "ECS Cluster Name",
+   "Value": {
+    "Ref": "MiniSwapECSClusterfy6eec74533B07"
+   },
+   "Export": {
+    "Name": "MiniSwap-ECS-Cluster-fy6eec"
    }
   },
   "RandomSuffix": {
    "Description": "Random suffix used for resource names",
-   "Value": "w79gky"
+   "Value": "fy6eec"
   }
  },
  "Parameters": {

@@ -1,5 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import * as ecs from 'aws-cdk-lib/aws-ecs';
 import * as rds from 'aws-cdk-lib/aws-rds';
 import * as secretsmanager from 'aws-cdk-lib/aws-secretsmanager';
 import { Construct } from 'constructs';
@@ -89,6 +90,13 @@ export class MiniSwapDatabaseStack extends cdk.Stack {
 
     // SecretTargetAttachment removed - will handle connection strings manually
 
+    // ECS Cluster - minimal configuration for containerized apps
+    const cluster = new ecs.Cluster(this, `MiniSwapECSCluster-${randomSuffix}`, {
+      vpc,
+      clusterName: `miniswap-cluster-${randomSuffix}`,
+      containerInsights: false // Disable for cost efficiency
+    });
+
     // Outputs with unique names
     new cdk.CfnOutput(this, `VpcId-${randomSuffix}`, {
       value: vpc.vpcId,
@@ -106,6 +114,12 @@ export class MiniSwapDatabaseStack extends cdk.Stack {
       value: dbSecret.secretArn,
       description: 'Database Secret ARN',
       exportName: `MiniSwap-DB-Secret-${randomSuffix}`
+    });
+
+    new cdk.CfnOutput(this, `ECSClusterName-${randomSuffix}`, {
+      value: cluster.clusterName,
+      description: 'ECS Cluster Name',
+      exportName: `MiniSwap-ECS-Cluster-${randomSuffix}`
     });
 
     new cdk.CfnOutput(this, `RandomSuffix`, {
