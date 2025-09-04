@@ -1,16 +1,16 @@
 {
   "version": "48.0.0",
   "files": {
-    "9d8d23206d195a9677f18dbdf6e021c2939e18f4aea378e02a20cb067242eb99": {
+    "33e313625cbc86994f69e5c826896284ef0aaeb27d49c3963b6ad36ec1c54c4a": {
       "displayName": "MiniSwapDatabaseStack Template",
       "source": {
         "path": "MiniSwapDatabaseStack.template.json",
         "packaging": "file"
       },
       "destinations": {
-        "720759362243-us-east-1-59483d1e": {
+        "720759362243-us-east-1-f4ebe0ed": {
           "bucketName": "cdk-hnb659fds-assets-720759362243-us-east-1",
-          "objectKey": "9d8d23206d195a9677f18dbdf6e021c2939e18f4aea378e02a20cb067242eb99.json",
+          "objectKey": "33e313625cbc86994f69e5c826896284ef0aaeb27d49c3963b6ad36ec1c54c4a.json",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::720759362243:role/cdk-hnb659fds-file-publishing-role-720759362243-us-east-1"
         }
@@ -18,15 +18,15 @@
     }
   },
   "dockerImages": {
-    "970d95791738db2b7f7d850f99d08222324221b2be261e13dc757fae8e6a8cbc": {
-      "displayName": "MiniSwapTaskDef-usl29b/MiniSwapContainer-usl29b/AssetImage",
+    "7559f1cb177c6bd49110ea68f3fe8e726242e7ae54071ad98979b7083ca2fd4f": {
+      "displayName": "MiniSwapTaskDef-5j6kwv/MiniSwapContainer-5j6kwv/AssetImage",
       "source": {
-        "directory": "asset.970d95791738db2b7f7d850f99d08222324221b2be261e13dc757fae8e6a8cbc"
+        "directory": "asset.7559f1cb177c6bd49110ea68f3fe8e726242e7ae54071ad98979b7083ca2fd4f"
       },
       "destinations": {
-        "720759362243-us-east-1-7bffe54e": {
+        "720759362243-us-east-1-15aa0cb8": {
           "repositoryName": "cdk-hnb659fds-container-assets-720759362243-us-east-1",
-          "imageTag": "970d95791738db2b7f7d850f99d08222324221b2be261e13dc757fae8e6a8cbc",
+          "imageTag": "7559f1cb177c6bd49110ea68f3fe8e726242e7ae54071ad98979b7083ca2fd4f",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::720759362243:role/cdk-hnb659fds-image-publishing-role-720759362243-us-east-1"
         }
