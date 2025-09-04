@@ -18,7 +18,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::720759362243:role/cdk-hnb659fds-deploy-role-720759362243-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::720759362243:role/cdk-hnb659fds-cfn-exec-role-720759362243-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-720759362243-us-east-1/509bac746a578275b2fb8f83831248f7e85b85d549db7500599bbd387bdeb76a.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-720759362243-us-east-1/fc2966d2b5b6bf8565f33c9c3fae14eacbb9a3abe1ce6917a87023419d4179ae.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -34,190 +34,232 @@
         "MiniSwapDatabaseStack.assets"
       ],
       "metadata": {
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/Resource": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecE531E0AB"
+            "data": "MiniSwapVPC6v0iqo1491D4E9"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1/Subnet": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/private-subnetSubnet1/Subnet": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecprivatesubnetSubnet1Subnet84803CFC"
+            "data": "MiniSwapVPC6v0iqoprivatesubnetSubnet1SubnetC1689F24"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1/RouteTable": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/private-subnetSubnet1/RouteTable": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecprivatesubnetSubnet1RouteTable92E87F0A"
+            "data": "MiniSwapVPC6v0iqoprivatesubnetSubnet1RouteTable0E7F4007"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1/RouteTableAssociation": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/private-subnetSubnet1/RouteTableAssociation": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecprivatesubnetSubnet1RouteTableAssociationBCAEA0CB"
+            "data": "MiniSwapVPC6v0iqoprivatesubnetSubnet1RouteTableAssociation61FCE7BE"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet1/DefaultRoute": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/private-subnetSubnet1/DefaultRoute": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecprivatesubnetSubnet1DefaultRoute07904007"
+            "data": "MiniSwapVPC6v0iqoprivatesubnetSubnet1DefaultRouteE00FFE13"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2/Subnet": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/private-subnetSubnet2/Subnet": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecprivatesubnetSubnet2Subnet0C586E8D"
+            "data": "MiniSwapVPC6v0iqoprivatesubnetSubnet2SubnetF3B2CDA4"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2/RouteTable": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/private-subnetSubnet2/RouteTable": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecprivatesubnetSubnet2RouteTable08C335B6"
+            "data": "MiniSwapVPC6v0iqoprivatesubnetSubnet2RouteTableE1595368"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2/RouteTableAssociation": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/private-subnetSubnet2/RouteTableAssociation": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecprivatesubnetSubnet2RouteTableAssociationB243F87C"
+            "data": "MiniSwapVPC6v0iqoprivatesubnetSubnet2RouteTableAssociation9BBEAF64"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/private-subnetSubnet2/DefaultRoute": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/private-subnetSubnet2/DefaultRoute": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecprivatesubnetSubnet2DefaultRoute0EFB70A8"
+            "data": "MiniSwapVPC6v0iqoprivatesubnetSubnet2DefaultRouteA2180D73"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/Subnet": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet1/Subnet": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet1SubnetA82DE362"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet1Subnet03256B95"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/RouteTable": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet1/RouteTable": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet1RouteTableEA7DAF78"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet1RouteTable6C924A4B"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/RouteTableAssociation": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet1/RouteTableAssociation": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet1RouteTableAssociation6E5DC8BB"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet1RouteTableAssociation0DA8BA53"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/DefaultRoute": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet1/DefaultRoute": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet1DefaultRoute27CF0DE7"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet1DefaultRoute8CCED73E"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/EIP": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet1/EIP": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet1EIPD6801E53"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet1EIPB28EF15D"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet1/NATGateway": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet1/NATGateway": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet1NATGateway7F060DA5"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet1NATGatewayC2B72B6B"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2/Subnet": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet2/Subnet": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet2Subnet7EB97FE3"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet2SubnetC0333511"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2/RouteTable": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet2/RouteTable": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet2RouteTable0DCA8C50"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet2RouteTable7AB5B520"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2/RouteTableAssociation": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet2/RouteTableAssociation": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet2RouteTableAssociationCD6F15DE"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet2RouteTableAssociation5231E36A"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/public-subnetSubnet2/DefaultRoute": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/public-subnetSubnet2/DefaultRoute": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecpublicsubnetSubnet2DefaultRoute83EC37DE"
+            "data": "MiniSwapVPC6v0iqopublicsubnetSubnet2DefaultRoute2641109F"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/IGW": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/IGW": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecIGWCAE9E531"
+            "data": "MiniSwapVPC6v0iqoIGW95368DAC"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapVPC-fy6eec/VPCGW": [
+        "/MiniSwapDatabaseStack/MiniSwapVPC-6v0iqo/VPCGW": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapVPCfy6eecVPCGW14045340"
+            "data": "MiniSwapVPC6v0iqoVPCGW1B1E70E6"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapDBSecurityGroup-fy6eec/Resource": [
+        "/MiniSwapDatabaseStack/MiniSwapDBSecurityGroup-6v0iqo/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapDBSecurityGroupfy6eec7BBDD779"
+            "data": "MiniSwapDBSecurityGroup6v0iqoB24E3E1E"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapDBSecret-fy6eec/Resource": [
+        "/MiniSwapDatabaseStack/MiniSwapDBSecret-6v0iqo/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapDBSecretfy6eec213F7CE3"
+            "data": "MiniSwapDBSecret6v0iqo3654A2A2"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapDBSecret-fy6eec/Attachment/Resource": [
+        "/MiniSwapDatabaseStack/MiniSwapDBSecret-6v0iqo/Attachment/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapDBSecretfy6eecAttachmentCFC3105B"
+            "data": "MiniSwapDBSecret6v0iqoAttachment8D624A9C"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapDBSubnetGroup-fy6eec/Default": [
+        "/MiniSwapDatabaseStack/MiniSwapDBSubnetGroup-6v0iqo/Default": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapDBSubnetGroupfy6eec"
+            "data": "MiniSwapDBSubnetGroup6v0iqo"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapDB-fy6eec/Resource": [
+        "/MiniSwapDatabaseStack/MiniSwapDB-6v0iqo/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapDBfy6eec2849F4E9"
+            "data": "MiniSwapDB6v0iqo01B15970"
           }
         ],
-        "/MiniSwapDatabaseStack/MiniSwapECSCluster-fy6eec/Resource": [
+        "/MiniSwapDatabaseStack/MiniSwapECSCluster-6v0iqo/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "MiniSwapECSClusterfy6eec74533B07"
+            "data": "MiniSwapECSCluster6v0iqo580E1C70"
           }
         ],
-        "/MiniSwapDatabaseStack/VpcId-fy6eec": [
+        "/MiniSwapDatabaseStack/MiniSwapLogGroup-6v0iqo/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "VpcIdfy6eec"
+            "data": "MiniSwapLogGroup6v0iqo432B9B82"
           }
         ],
-        "/MiniSwapDatabaseStack/DatabaseEndpoint-fy6eec": [
+        "/MiniSwapDatabaseStack/MiniSwapTaskDef-6v0iqo/TaskRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "DatabaseEndpointfy6eec"
+            "data": "MiniSwapTaskDef6v0iqoTaskRole92F70FC3"
           }
         ],
-        "/MiniSwapDatabaseStack/DatabaseSecretArn-fy6eec": [
+        "/MiniSwapDatabaseStack/MiniSwapTaskDef-6v0iqo/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "DatabaseSecretArnfy6eec"
+            "data": "MiniSwapTaskDef6v0iqo301D5290"
           }
         ],
-        "/MiniSwapDatabaseStack/ECSClusterName-fy6eec": [
+        "/MiniSwapDatabaseStack/MiniSwapTaskDef-6v0iqo/ExecutionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "ECSClusterNamefy6eec"
+            "data": "MiniSwapTaskDef6v0iqoExecutionRole57D9EC02"
+          }
+        ],
+        "/MiniSwapDatabaseStack/MiniSwapTaskDef-6v0iqo/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MiniSwapTaskDef6v0iqoExecutionRoleDefaultPolicyFB30C816"
+          }
+        ],
+        "/MiniSwapDatabaseStack/VpcId-6v0iqo": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcId6v0iqo"
+          }
+        ],
+        "/MiniSwapDatabaseStack/DatabaseEndpoint-6v0iqo": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DatabaseEndpoint6v0iqo"
+          }
+        ],
+        "/MiniSwapDatabaseStack/DatabaseSecretArn-6v0iqo": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DatabaseSecretArn6v0iqo"
+          }
+        ],
+        "/MiniSwapDatabaseStack/ECSClusterName-6v0iqo": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ECSClusterName6v0iqo"
+          }
+        ],
+        "/MiniSwapDatabaseStack/TaskDefinitionArn-6v0iqo": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDefinitionArn6v0iqo"
+          }
+        ],
+        "/MiniSwapDatabaseStack/LogGroupName-6v0iqo": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogGroupName6v0iqo"
           }
         ],
         "/MiniSwapDatabaseStack/RandomSuffix": [

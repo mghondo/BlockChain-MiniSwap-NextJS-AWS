@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as ecs from 'aws-cdk-lib/aws-ecs';
+import * as logs from 'aws-cdk-lib/aws-logs';
 import * as rds from 'aws-cdk-lib/aws-rds';
 import * as secretsmanager from 'aws-cdk-lib/aws-secretsmanager';
 import { Construct } from 'constructs';
@@ -97,6 +98,46 @@ export class MiniSwapDatabaseStack extends cdk.Stack {
       containerInsights: false // Disable for cost efficiency
     });
 
+    // CloudWatch Log Group for application logs
+    const logGroup = new logs.LogGroup(this, `MiniSwapLogGroup-${randomSuffix}`, {
+      logGroupName: `/aws/ecs/miniswap-${randomSuffix}`,
+      retention: logs.RetentionDays.ONE_WEEK, // Cost-effective log retention
+      removalPolicy: cdk.RemovalPolicy.DESTROY
+    });
+
+    // Fargate Task Definition for React application
+    const taskDefinition = new ecs.FargateTaskDefinition(this, `MiniSwapTaskDef-${randomSuffix}`, {
+      family: `miniswap-task-${randomSuffix}`,
+      cpu: 256, // Minimal CPU for cost efficiency (0.25 vCPU)
+      memoryLimitMiB: 512, // Minimal memory (0.5 GB)
+    });
+
+    // Container definition for React app
+    const container = taskDefinition.addContainer(`MiniSwapContainer-${randomSuffix}`, {
+      containerName: `miniswap-app-${randomSuffix}`,
+      image: ecs.ContainerImage.fromAsset('../frontend'), // Build from local React app
+      environment: {
+        NODE_ENV: 'production',
+        PORT: '3000'
+      },
+      secrets: {
+        // Connect to existing database secret - we'll construct DATABASE_URL from components
+        DB_HOST: ecs.Secret.fromSecretsManager(dbSecret, 'host'),
+        DB_USER: ecs.Secret.fromSecretsManager(dbSecret, 'username'), 
+        DB_PASSWORD: ecs.Secret.fromSecretsManager(dbSecret, 'password'),
+        DB_NAME: ecs.Secret.fromSecretsManager(dbSecret, 'dbname'),
+        DB_PORT: ecs.Secret.fromSecretsManager(dbSecret, 'port')
+      },
+      logging: ecs.LogDrivers.awsLogs({
+        streamPrefix: 'miniswap',
+        logGroup
+      }),
+      portMappings: [{
+        containerPort: 3000,
+        protocol: ecs.Protocol.TCP
+      }]
+    });
+
     // Outputs with unique names
     new cdk.CfnOutput(this, `VpcId-${randomSuffix}`, {
       value: vpc.vpcId,
@@ -120,6 +161,18 @@ export class MiniSwapDatabaseStack extends cdk.Stack {
       value: cluster.clusterName,
       description: 'ECS Cluster Name',
       exportName: `MiniSwap-ECS-Cluster-${randomSuffix}`
+    });
+
+    new cdk.CfnOutput(this, `TaskDefinitionArn-${randomSuffix}`, {
+      value: taskDefinition.taskDefinitionArn,
+      description: 'Fargate Task Definition ARN',
+      exportName: `MiniSwap-TaskDef-${randomSuffix}`
+    });
+
+    new cdk.CfnOutput(this, `LogGroupName-${randomSuffix}`, {
+      value: logGroup.logGroupName,
+      description: 'CloudWatch Log Group Name',
+      exportName: `MiniSwap-LogGroup-${randomSuffix}`
     });
 
     new cdk.CfnOutput(this, `RandomSuffix`, {
