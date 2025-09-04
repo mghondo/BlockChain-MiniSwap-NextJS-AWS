@@ -1,16 +1,16 @@
 {
   "version": "48.0.0",
   "files": {
-    "fc2966d2b5b6bf8565f33c9c3fae14eacbb9a3abe1ce6917a87023419d4179ae": {
+    "9d8d23206d195a9677f18dbdf6e021c2939e18f4aea378e02a20cb067242eb99": {
       "displayName": "MiniSwapDatabaseStack Template",
       "source": {
         "path": "MiniSwapDatabaseStack.template.json",
         "packaging": "file"
       },
       "destinations": {
-        "720759362243-us-east-1-37877f18": {
+        "720759362243-us-east-1-59483d1e": {
           "bucketName": "cdk-hnb659fds-assets-720759362243-us-east-1",
-          "objectKey": "fc2966d2b5b6bf8565f33c9c3fae14eacbb9a3abe1ce6917a87023419d4179ae.json",
+          "objectKey": "9d8d23206d195a9677f18dbdf6e021c2939e18f4aea378e02a20cb067242eb99.json",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::720759362243:role/cdk-hnb659fds-file-publishing-role-720759362243-us-east-1"
         }
@@ -19,7 +19,7 @@
   },
   "dockerImages": {
     "970d95791738db2b7f7d850f99d08222324221b2be261e13dc757fae8e6a8cbc": {
-      "displayName": "MiniSwapTaskDef-6v0iqo/MiniSwapContainer-6v0iqo/AssetImage",
+      "displayName": "MiniSwapTaskDef-usl29b/MiniSwapContainer-usl29b/AssetImage",
       "source": {
         "directory": "asset.970d95791738db2b7f7d850f99d08222324221b2be261e13dc757fae8e6a8cbc"
       },
